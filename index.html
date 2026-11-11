@@ -25,7 +25,7 @@
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" id="consulta" aria-labelledby="hero-title">
       <div class="hero-content">
         <p class="eyebrow">CIDADE DAS ROSAS</p>
         <h1 id="hero-title">Todo caminho em Barbacena começa por um <em>CEP.</em></h1>
@@ -38,6 +38,19 @@
           </div>
           <p class="helper" id="cep-helper">Exemplo de Barbacena · consulta em tempo real pela ViaCEP.</p>
           <p class="form-message" id="cep-message" role="status" aria-live="polite"></p>
+        </form>
+        <div class="divider-note"><span>ou procure pelo nome</span></div>
+        <form class="address-form" id="address-form" novalidate>
+          <label for="address-input">Rua, avenida, praça ou bairro</label>
+          <div class="autocomplete-shell">
+            <div class="address-input-row">
+              <input id="address-input" name="address" type="search" autocomplete="off" placeholder="Ex.: Avenida Bias Fortes" aria-describedby="address-helper address-message" aria-controls="address-suggestions" aria-expanded="false" required>
+              <button type="submit">Buscar <span aria-hidden="true">⌕</span></button>
+            </div>
+            <ul class="address-suggestions" id="address-suggestions" role="listbox" aria-label="Sugestões de logradouros"></ul>
+          </div>
+          <p class="helper" id="address-helper">Ruas e avenidas pela ViaCEP; bairros também usam a base local consolidada.</p>
+          <p class="form-message" id="address-message" role="status" aria-live="polite"></p>
         </form>
       </div>
       <div class="hero-detail" aria-hidden="true">
@@ -52,12 +65,12 @@
       </div>
     </section>
 
-    <section class="result-section section-wrap" id="consulta" aria-labelledby="result-title">
+    <section class="result-section section-wrap" id="resultado" aria-labelledby="result-title">
       <div class="section-kicker"><span>01</span><i></i><span>RESULTADO</span></div>
       <div class="result-area" id="result-area" aria-live="polite">
         <div class="empty-result">
           <p id="result-title">O endereço encontrado aparecerá aqui.</p>
-          <span>Informe um CEP acima para começar.</span>
+          <span>Informe um CEP ou pesquise pelo nome do logradouro.</span>
         </div>
       </div>
     </section>

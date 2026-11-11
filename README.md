@@ -32,7 +32,7 @@ O projeto é compatível com GitHub Pages e Vercel. No GitHub, habilite Pages us
 - `https://viacep.com.br/ws/MG/Barbacena/Avenida/json/` — 43 registros
 - `https://viacep.com.br/ws/MG/Barbacena/Praca/json/` — 50 registros
 
-O campo de consulta usa `fetch` diretamente em `https://viacep.com.br/ws/{CEP}/json/`, exibindo logradouro, bairro, cidade e UF. A base local consolidada permanece versionada como referência dos logradouros de Barbacena e para atender à etapa de dados da atividade.
+O campo de CEP usa `fetch` diretamente em `https://viacep.com.br/ws/{CEP}/json/`, exibindo logradouro, bairro, cidade e UF. Também é possível pesquisar por nome de rua, avenida ou praça usando `https://viacep.com.br/ws/MG/Barbacena/{logradouro}/json/`. Como a API não retorna bairros em todos os casos nessa rota, a busca por bairro usa a base local consolidada, que também foi originada da ViaCEP.
 
 ## Hashtag da atividade
 
